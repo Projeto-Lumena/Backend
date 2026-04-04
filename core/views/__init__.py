@@ -12,3 +12,4 @@ from .tipo import TipoProdutoViewSet
 from .recipiente import RecipienteViewSet
 from .aroma import AromaViewSet
 from .adesivo import AdesivoViewSet
+from .categoria import CategoriaViewSet
