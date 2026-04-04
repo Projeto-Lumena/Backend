@@ -1,6 +1,5 @@
 from django.db import models
-from .user import User
-from .produto import Produto
+from core.models import User, Produto
 
 class Avaliacao(models.Model):
     usuario = models.ForeignKey( User, on_delete=models.CASCADE)
