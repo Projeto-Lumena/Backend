@@ -13,3 +13,4 @@ from .recipiente import Recipiente
 from .aroma import Aroma
 from .adesivo import Adesivo
 from .categoria import Categoria
+from .parafina import Parafina

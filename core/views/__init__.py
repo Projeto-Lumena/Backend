@@ -13,3 +13,4 @@ from .recipiente import RecipienteViewSet
 from .aroma import AromaViewSet
 from .adesivo import AdesivoViewSet
 from .categoria import CategoriaViewSet
+from .parafina import ParafinaViewSet
