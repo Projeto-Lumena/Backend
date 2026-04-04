@@ -8,3 +8,4 @@ from .item_pedido import ItemPedidoSerializer
 from .fita import FitaSerializer
 from .produto import ProdutoSerializer  
 from .tampa import TampaSerializer
+from .tipo import TipoProdutoSerializer

@@ -1,6 +1,6 @@
 from django.db import models
 
-from .tipo_produto import TipoProduto
+from .tipo import TipoProduto
 
 class Tampa(models.Model):
     tipo = models.ForeignKey(TipoProduto, on_delete=models.CASCADE)

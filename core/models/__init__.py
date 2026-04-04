@@ -8,3 +8,4 @@ from .item_pedido import ItemPedido
 from .fita import Fita
 from .produto import Produto
 from .tampa import Tampa
+from .tipo import TipoProduto
