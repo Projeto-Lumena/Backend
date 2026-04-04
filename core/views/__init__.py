@@ -7,3 +7,4 @@ from .embalagem import EmbalagemViewSet
 from .item_pedido import ItemPedidoViewSet
 from .fita import FitaViewSet
 from .produto import ProdutoViewSet
+from .tampa import TampaViewSet

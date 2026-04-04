@@ -7,3 +7,4 @@ from .embalagem import EmbalagemSerializer
 from .item_pedido import ItemPedidoSerializer
 from .fita import FitaSerializer
 from .produto import ProdutoSerializer  
+from .tampa import TampaSerializer
