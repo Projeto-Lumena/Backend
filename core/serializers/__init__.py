@@ -16,3 +16,4 @@ from .aroma import AromaSerializer
 from .adesivo import AdesivoSerializer
 from .categoria import CategoriaSerializer
 from .parafina import ParafinaSerializer
+from .pavio import PavioSerializer

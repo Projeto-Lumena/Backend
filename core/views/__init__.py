@@ -14,3 +14,4 @@ from .aroma import AromaViewSet
 from .adesivo import AdesivoViewSet
 from .categoria import CategoriaViewSet
 from .parafina import ParafinaViewSet
+from .pavio import PavioViewSet
