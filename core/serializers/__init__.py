@@ -3,3 +3,4 @@ from .endereco import EnderecoSerializer
 from .avaliacao import AvaliacaoSerializer
 from .pedido import PedidoSerializer
 from .pagamento import PagamentoSerializer
+from .embalagem import EmbalagemSerializer
