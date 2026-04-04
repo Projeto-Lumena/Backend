@@ -9,3 +9,4 @@ from .fita import FitaViewSet
 from .produto import ProdutoViewSet
 from .tampa import TampaViewSet
 from .tipo import TipoProdutoViewSet
+from .recipiente import RecipienteViewSet

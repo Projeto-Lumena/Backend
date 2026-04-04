@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.locale import ro
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -12,7 +13,7 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
-from core.views import UserRegistrationView, UserViewSet, EnderecoViewSet, AvaliacaoViewSet, PedidoViewSet, PagamentoViewSet, EmbalagemViewSet, ItemPedidoViewSet, FitaViewSet, ProdutoViewSet, TampaViewSet, TipoProdutoViewSet
+from core.views import UserRegistrationView, UserViewSet, EnderecoViewSet, AvaliacaoViewSet, PedidoViewSet, PagamentoViewSet, EmbalagemViewSet, ItemPedidoViewSet, FitaViewSet, ProdutoViewSet, TampaViewSet, TipoProdutoViewSet, RecipienteViewSet
 
 router = DefaultRouter()
 
@@ -27,6 +28,7 @@ router.register(r'fita', FitaViewSet, basename='fita')
 router.register(r'produto', ProdutoViewSet, basename='produto')
 router.register(r'tampa', TampaViewSet, basename='tampa')
 router.register(r'tipo', TipoProdutoViewSet, basename='tipo')
+router.register(r'recipiente', RecipienteViewSet, basename='recipiente')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -9,3 +9,4 @@ from .fita import FitaSerializer
 from .produto import ProdutoSerializer  
 from .tampa import TampaSerializer
 from .tipo import TipoProdutoSerializer
+from .recipiente import RecipienteSerializer

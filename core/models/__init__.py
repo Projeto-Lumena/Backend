@@ -9,3 +9,4 @@ from .fita import Fita
 from .produto import Produto
 from .tampa import Tampa
 from .tipo import TipoProduto
+from .recipiente import Recipiente
