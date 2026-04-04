@@ -10,3 +10,4 @@ from .produto import Produto
 from .tampa import Tampa
 from .tipo import TipoProduto
 from .recipiente import Recipiente
+from .aroma import Aroma

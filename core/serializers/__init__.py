@@ -1,3 +1,5 @@
+from django.conf.locale import fr
+
 from .user import UserRegistrationSerializer, UserSerializer
 from .endereco import EnderecoSerializer
 from .avaliacao import AvaliacaoSerializer
@@ -10,3 +12,4 @@ from .produto import ProdutoSerializer
 from .tampa import TampaSerializer
 from .tipo import TipoProdutoSerializer
 from .recipiente import RecipienteSerializer
+from .aroma import AromaSerializer 
