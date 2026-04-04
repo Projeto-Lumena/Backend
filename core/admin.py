@@ -64,3 +64,4 @@ admin.site.register(models.Tampa)
 admin.site.register(models.TipoProduto)
 admin.site.register(models.Recipiente)
 admin.site.register(models.Aroma)
+admin

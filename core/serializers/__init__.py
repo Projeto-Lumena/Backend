@@ -13,3 +13,4 @@ from .tampa import TampaSerializer
 from .tipo import TipoProdutoSerializer
 from .recipiente import RecipienteSerializer
 from .aroma import AromaSerializer 
+from .adesivo import AdesivoSerializer
