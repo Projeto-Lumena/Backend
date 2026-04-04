@@ -11,3 +11,7 @@ class Endereco(models.Model):
     estado = models.CharField(max_length=2)
     cep = models.CharField(max_length=10)
     tipo = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = 'Endereço'
+        verbose_name_plural = 'Endereços'

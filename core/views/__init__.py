@@ -6,3 +6,4 @@ from .pagamento import PagamentoViewSet
 from .embalagem import EmbalagemViewSet
 from .item_pedido import ItemPedidoViewSet
 from .fita import FitaViewSet
+from .produto import ProdutoViewSet

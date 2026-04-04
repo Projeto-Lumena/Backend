@@ -6,3 +6,4 @@ from .pagamento import Pagamento
 from .embalagem import Embalagem
 from .item_pedido import ItemPedido
 from .fita import Fita
+from .produto import Produto

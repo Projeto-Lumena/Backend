@@ -1,6 +1,6 @@
 from django.db import models
 
-from core.models.user import User
+from .user import User
 
 class Pedido(models.Model):
     usuario = models.ForeignKey( User, on_delete=models.PROTECT)

@@ -6,3 +6,4 @@ from .pagamento import PagamentoSerializer
 from .embalagem import EmbalagemSerializer
 from .item_pedido import ItemPedidoSerializer
 from .fita import FitaSerializer
+from .produto import ProdutoSerializer  
