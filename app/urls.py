@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.locale import ro
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -12,12 +13,28 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
-from core.views import UserRegistrationView, UserViewSet, EnderecoViewSet
+from core.views import UserRegistrationView, UserViewSet, EnderecoViewSet, AvaliacaoViewSet, PedidoViewSet, PagamentoViewSet, EmbalagemViewSet, ItemPedidoViewSet, FitaViewSet, ProdutoViewSet, TampaViewSet, TipoProdutoViewSet, RecipienteViewSet, AromaViewSet, AdesivoViewSet, CategoriaViewSet, ParafinaViewSet, PavioViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'endereco', EnderecoViewSet, basename='endereco')
+router.register(r'avaliacao', AvaliacaoViewSet, basename='avaliacao')
+router.register(r'pedido', PedidoViewSet, basename='pedido')
+router.register(r'pagamento', PagamentoViewSet, basename='pagamento')
+router.register(r'embalagem', EmbalagemViewSet, basename='embalagem')
+router.register(r'item-pedido', ItemPedidoViewSet, basename='item-pedido')
+router.register(r'fita', FitaViewSet, basename='fita')
+router.register(r'produto', ProdutoViewSet, basename='produto')
+router.register(r'tampa', TampaViewSet, basename='tampa')
+router.register(r'tipo', TipoProdutoViewSet, basename='tipo')
+router.register(r'recipiente', RecipienteViewSet, basename='recipiente')
+router.register(r'aroma', AromaViewSet, basename='aroma')
+router.register(r'adesivo', AdesivoViewSet, basename='adesivo')
+router.register(r'categoria', CategoriaViewSet, basename='categoria')
+router.register(r'parafina', ParafinaViewSet, basename='parafina')
+router.register(r'pavio', PavioViewSet, basename='pavio')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
