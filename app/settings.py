@@ -158,5 +158,12 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
+# Configurações do Cloudinary para armazenamento de mídia
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dz0b8ehuk',
+    'API_KEY': '488439381972513',
+    'API_SECRET': 'zoob_lZOKtQ7YyH8MT-ghRvtNk0',
+}
+
 # Exibe as configurações principais para verificação
 print(f'{MODE = } \n{MEDIA_URL = } \n{DATABASES = }')

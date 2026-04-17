@@ -2,6 +2,7 @@ from django.db import models
 
 from .pedido import Pedido
 
+
 class Pagamento(models.Model):
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
     valor = models.DecimalField(max_digits=10, decimal_places=2)

@@ -7,6 +7,7 @@ from .embalagem import Embalagem
 from .item_pedido import ItemPedido
 from .fita import Fita
 from .produto import Produto
+from .produto_variacao import ProdutoVariacao
 from .tampa import Tampa
 from .tipo import TipoProduto
 from .recipiente import Recipiente

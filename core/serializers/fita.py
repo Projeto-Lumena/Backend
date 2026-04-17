@@ -1,5 +1,7 @@
 from rest_framework import serializers
+
 from core.models import Fita
+
 
 class FitaSerializer(serializers.ModelSerializer):
     class Meta:

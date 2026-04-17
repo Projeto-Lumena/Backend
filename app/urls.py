@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.locale import ro
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -13,7 +12,27 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
-from core.views import UserRegistrationView, UserViewSet, EnderecoViewSet, AvaliacaoViewSet, PedidoViewSet, PagamentoViewSet, EmbalagemViewSet, ItemPedidoViewSet, FitaViewSet, ProdutoViewSet, TampaViewSet, TipoProdutoViewSet, RecipienteViewSet, AromaViewSet, AdesivoViewSet, CategoriaViewSet, ParafinaViewSet, PavioViewSet
+from core.views import (
+    AdesivoViewSet,
+    AromaViewSet,
+    AvaliacaoViewSet,
+    CategoriaViewSet,
+    EmbalagemViewSet,
+    EnderecoViewSet,
+    FitaViewSet,
+    ItemPedidoViewSet,
+    PagamentoViewSet,
+    ParafinaViewSet,
+    PavioViewSet,
+    PedidoViewSet,
+    ProdutoVariacaoViewSet,
+    ProdutoViewSet,
+    RecipienteViewSet,
+    TampaViewSet,
+    TipoProdutoViewSet,
+    UserRegistrationView,
+    UserViewSet,
+)
 
 router = DefaultRouter()
 
@@ -26,6 +45,7 @@ router.register(r'embalagem', EmbalagemViewSet, basename='embalagem')
 router.register(r'item-pedido', ItemPedidoViewSet, basename='item-pedido')
 router.register(r'fita', FitaViewSet, basename='fita')
 router.register(r'produto', ProdutoViewSet, basename='produto')
+router.register(r'produto-variacao', ProdutoVariacaoViewSet, basename='produto-variacao')
 router.register(r'tampa', TampaViewSet, basename='tampa')
 router.register(r'tipo', TipoProdutoViewSet, basename='tipo')
 router.register(r'recipiente', RecipienteViewSet, basename='recipiente')

@@ -7,6 +7,7 @@ from .embalagem import EmbalagemViewSet
 from .item_pedido import ItemPedidoViewSet
 from .fita import FitaViewSet
 from .produto import ProdutoViewSet
+from .produto_variacao import ProdutoVariacaoViewSet
 from .tampa import TampaViewSet
 from .tipo import TipoProdutoViewSet
 from .recipiente import RecipienteViewSet
