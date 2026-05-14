@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Embalagem
 
 
-class EmbalagemSerializer(serializers.ModelSerializer):
+class EmbalagemSerializer(ModelSerializer):
     class Meta:
         model = Embalagem
         fields = '__all__'
