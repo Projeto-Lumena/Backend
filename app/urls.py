@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import (
@@ -33,6 +35,7 @@ from core.views import (
     UserRegistrationView,
     UserViewSet,
 )
+from uploader.router import router as uploader_router
 
 router = DefaultRouter()
 
@@ -70,6 +73,8 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name='schema'),
         name='redoc',
     ),
+    # Uploader de mídia
+    path('api/media/', include(uploader_router.urls)),
     # Autenticação JWT
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
@@ -79,3 +84,6 @@ urlpatterns = [
     # API
     path('api/', include(router.urls)),
 ]
+
+
+urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
