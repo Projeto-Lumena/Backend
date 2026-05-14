@@ -6,9 +6,11 @@ from uploader.serializers import ImageSerializer
 
 
 class ProdutoListSerializer(ModelSerializer):
+    imagem = ImageSerializer()
+
     class Meta:
         model = Produto
-        fields = ('id', 'nome')
+        fields = ('id', 'nome', 'imagem', 'categorias')
 
 
 class ProdutoRetrieveSerializer(ModelSerializer):
