@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Aroma
 
 
-class AromaSerializer(serializers.ModelSerializer):
+class AromaSerializer(ModelSerializer):
     class Meta:
         model = Aroma
         fields = '__all__'

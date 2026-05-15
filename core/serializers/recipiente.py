@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Recipiente
 
 
-class RecipienteSerializer(serializers.ModelSerializer):
+class RecipienteSerializer(ModelSerializer):
     class Meta:
         model = Recipiente
         fields = '__all__'

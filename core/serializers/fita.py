@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Fita
 
 
-class FitaSerializer(serializers.ModelSerializer):
+class FitaSerializer(ModelSerializer):
     class Meta:
         model = Fita
         fields = '__all__'
