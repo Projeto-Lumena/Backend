@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import TipoProduto
 
 
-class TipoProdutoSerializer(serializers.ModelSerializer):
+class TipoProdutoSerializer(ModelSerializer):
     class Meta:
         model = TipoProduto
         fields = '__all__'

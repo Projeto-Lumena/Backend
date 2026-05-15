@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Pagamento
 
 
-class PagamentoSerializer(serializers.ModelSerializer):
+class PagamentoSerializer(ModelSerializer):
     class Meta:
         model = Pagamento
         fields = '__all__'

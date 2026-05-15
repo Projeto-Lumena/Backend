@@ -1,9 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 from core.models import Tampa
 
 
-class TampaSerializer(serializers.ModelSerializer):
+class TampaSerializer(ModelSerializer):
     class Meta:
         model = Tampa
         fields = '__all__'
