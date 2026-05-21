@@ -7,8 +7,55 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core import models
+from core.models import Categoria, Produto, ProdutoVariacao, User
 
 
+@admin.register(Produto)
+class ProdutoAdmin(admin.ModelAdmin):
+    list_display = (
+        'nome',
+        'ativo',
+    )
+    list_filter = (
+        'ativo',
+        'categorias',
+    )
+    search_fields = (
+        'nome',
+        'descricao',
+    )
+    ordering = ('nome',)
+    list_per_page = 10
+
+
+@admin.register(ProdutoVariacao)
+class ProdutoVariacaoAdmin(admin.ModelAdmin):
+    list_display = (
+        'produto',
+        'tamanho',
+        'preco',
+    )
+    list_filter = (
+        'tamanho',
+        'preco',
+    )
+    search_fields = ('produto__nome',)
+    ordering = (
+        'produto',
+        'preco',
+    )
+    list_per_page = 10
+
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
+    search_fields = ('nome',)
+    ordering = ('nome',)
+    list_per_page = 10
+
+
+@admin.register(User)
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
@@ -51,7 +98,6 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
-admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Endereco)
 admin.site.register(models.Avaliacao)
 admin.site.register(models.Pedido)
@@ -59,13 +105,10 @@ admin.site.register(models.Pagamento)
 admin.site.register(models.Embalagem)
 admin.site.register(models.ItemPedido)
 admin.site.register(models.Fita)
-admin.site.register(models.Produto)
-admin.site.register(models.ProdutoVariacao)
 admin.site.register(models.Tampa)
 admin.site.register(models.TipoProduto)
 admin.site.register(models.Recipiente)
 admin.site.register(models.Aroma)
 admin.site.register(models.Adesivo)
-admin.site.register(models.Categoria)
 admin.site.register(models.Parafina)
 admin.site.register(models.Pavio)
