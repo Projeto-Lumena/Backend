@@ -1,0 +1,2471 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-05-14T21:35:26.264Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "1",
+    "object_repr": " - d25deff4-fc64-40eb-a7e0-e7d4a27c43bd",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-05-14T21:35:52.441Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Aromas Doces",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-05-14T21:36:00.302Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Aromas Florais",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-05-14T21:36:07.572Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Aromas Cítricos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-05-14T21:36:17.890Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Lembrancinhas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-05-14T21:58:55.130Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Flor de Laranjeira",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-05-14T22:05:07.593Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "2",
+    "object_repr": " - 50d8248c-c77a-45de-b861-3113b206ad6e",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-05-14T22:05:41.043Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Capim Limão",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-05-14T22:06:54.367Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "3",
+    "object_repr": " - a80da5b3-f0e9-4929-9fa3-8b0dbf734cee",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-05-14T22:07:47.763Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Lavanda Francesa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-05-14T22:08:09.270Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "4",
+    "object_repr": " - aa6626fd-3062-4d61-99d0-52aaeb68d9ca",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-05-14T22:08:16.838Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "Jasmim",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-05-14T22:08:43.292Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "5",
+    "object_repr": " - 124d58f9-5a95-47a8-b8c3-c84ae4a4700c",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-05-14T22:08:55.298Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "Flor de Cerejeira",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-05-14T22:09:16.738Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "6",
+    "object_repr": " - 919b39bf-cc86-4469-9b1d-a57d4f2ae39a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-05-14T22:09:24.015Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "6",
+    "object_repr": "Maçã e Canela",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-05-14T22:09:46.236Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "7",
+    "object_repr": " - b7bbc3a9-b498-4fa3-a66b-173db968913d",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-05-14T22:09:54.593Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "7",
+    "object_repr": "Bergamota",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-05-14T22:11:30.915Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "8",
+    "object_repr": " - a3ad6b8d-b1f5-4652-90dd-f4499b83d049",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-05-14T22:11:39.841Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "8",
+    "object_repr": "Baunilha",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-05-14T22:12:07.100Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "9",
+    "object_repr": " - 36c08182-d60b-407a-806a-b8ce7790c4a2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-05-14T22:12:09.004Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "9",
+    "object_repr": "Limão Siciliano",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-05-14T22:13:06.539Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Flor de Laranjeira - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-05-14T22:13:22.916Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Flor de Laranjeira - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-05-14T22:13:31.743Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Flor de Laranjeira - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-05-14T22:13:44.174Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "Capim Limão - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-05-14T22:13:52.676Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Capim Limão - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-05-14T22:14:00.573Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Capim Limão - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-05-14T22:14:10.246Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "7",
+    "object_repr": "Lavanda Francesa - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-05-14T22:14:19.172Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "8",
+    "object_repr": "Lavanda Francesa - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-05-14T22:14:28.302Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "9",
+    "object_repr": "Lavanda Francesa - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-05-14T22:14:36.792Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "10",
+    "object_repr": "Jasmim - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-05-14T22:14:47.440Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "Lavanda Francesa - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-05-14T22:14:59.707Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "Jasmim - M",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Produto\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-05-14T22:15:12.713Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "12",
+    "object_repr": "Jasmim - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-05-14T22:15:21.136Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "13",
+    "object_repr": "Flor de Cerejeira - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-05-14T22:15:29.407Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "14",
+    "object_repr": "Flor de Cerejeira - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-05-14T22:15:38.347Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "15",
+    "object_repr": "Flor de Cerejeira - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-05-14T22:15:46.596Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "16",
+    "object_repr": "Maçã e Canela - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-05-14T22:15:54.703Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "17",
+    "object_repr": "Maçã e Canela - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-05-14T22:16:03.662Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "Maçã e Canela - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-05-14T22:16:11.417Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "19",
+    "object_repr": "Bergamota - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-05-14T22:16:19.470Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "20",
+    "object_repr": "Bergamota - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-05-14T22:16:30.676Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "21",
+    "object_repr": "Bergamota - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-05-14T22:16:40.181Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "22",
+    "object_repr": "Baunilha - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-05-14T22:16:47.663Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "23",
+    "object_repr": "Baunilha - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-05-14T22:16:56.076Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "24",
+    "object_repr": "Baunilha - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-05-14T22:17:05.034Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "25",
+    "object_repr": "Limão Siciliano - P",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-05-14T22:17:12.490Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "26",
+    "object_repr": "Limão Siciliano - M",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-05-14T22:17:20.256Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "27",
+    "object_repr": "Limão Siciliano - G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-05-14T22:38:38.917Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Aromas Florais",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-05-14T22:39:07.227Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Aromas Cítricos",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-05-14T22:39:33.244Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Lembrancinhas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-05-14T22:39:55.374Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Aromas Doces",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-05-14T22:41:23.402Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Aromas Doces",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-05-14T22:41:45.116Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Lembrancinhas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nome\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-05-14T22:54:55.506Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Flor de Laranjeira",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-05-14T22:55:08.371Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Capim Limão",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-05-14T22:55:17.391Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Lavanda Francesa",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-05-14T22:55:27.108Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "Jasmim",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-05-14T22:55:35.175Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "Flor de Cerejeira",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-05-14T22:55:44.282Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "6",
+    "object_repr": "Maçã e Canela",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-05-14T22:55:52.944Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "7",
+    "object_repr": "Bergamota",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-05-14T22:56:02.582Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "8",
+    "object_repr": "Baunilha",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-05-14T22:56:14.812Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "9",
+    "object_repr": "Limão Siciliano",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categorias\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add aroma",
+    "content_type": 6,
+    "codename": "add_aroma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change aroma",
+    "content_type": 6,
+    "codename": "change_aroma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete aroma",
+    "content_type": 6,
+    "codename": "delete_aroma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view aroma",
+    "content_type": 6,
+    "codename": "view_aroma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add categoria",
+    "content_type": 7,
+    "codename": "add_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change categoria",
+    "content_type": 7,
+    "codename": "change_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete categoria",
+    "content_type": 7,
+    "codename": "delete_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view categoria",
+    "content_type": 7,
+    "codename": "view_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Embalagem",
+    "content_type": 8,
+    "codename": "add_embalagem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Embalagem",
+    "content_type": 8,
+    "codename": "change_embalagem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Embalagem",
+    "content_type": 8,
+    "codename": "delete_embalagem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Embalagem",
+    "content_type": 8,
+    "codename": "view_embalagem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add fita",
+    "content_type": 9,
+    "codename": "add_fita"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change fita",
+    "content_type": 9,
+    "codename": "change_fita"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete fita",
+    "content_type": 9,
+    "codename": "delete_fita"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view fita",
+    "content_type": 9,
+    "codename": "view_fita"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add parafina",
+    "content_type": 10,
+    "codename": "add_parafina"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change parafina",
+    "content_type": 10,
+    "codename": "change_parafina"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete parafina",
+    "content_type": 10,
+    "codename": "delete_parafina"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view parafina",
+    "content_type": 10,
+    "codename": "view_parafina"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add pavio",
+    "content_type": 11,
+    "codename": "add_pavio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change pavio",
+    "content_type": 11,
+    "codename": "change_pavio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete pavio",
+    "content_type": 11,
+    "codename": "delete_pavio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view pavio",
+    "content_type": 11,
+    "codename": "view_pavio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add tipo produto",
+    "content_type": 12,
+    "codename": "add_tipoproduto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change tipo produto",
+    "content_type": 12,
+    "codename": "change_tipoproduto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete tipo produto",
+    "content_type": 12,
+    "codename": "delete_tipoproduto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view tipo produto",
+    "content_type": 12,
+    "codename": "view_tipoproduto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Usuário",
+    "content_type": 13,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Usuário",
+    "content_type": 13,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Usuário",
+    "content_type": 13,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Usuário",
+    "content_type": 13,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Endereço",
+    "content_type": 14,
+    "codename": "add_endereco"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Endereço",
+    "content_type": 14,
+    "codename": "change_endereco"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Endereço",
+    "content_type": 14,
+    "codename": "delete_endereco"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Endereço",
+    "content_type": 14,
+    "codename": "view_endereco"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add pedido",
+    "content_type": 15,
+    "codename": "add_pedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change pedido",
+    "content_type": 15,
+    "codename": "change_pedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete pedido",
+    "content_type": 15,
+    "codename": "delete_pedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view pedido",
+    "content_type": 15,
+    "codename": "view_pedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add pagamento",
+    "content_type": 16,
+    "codename": "add_pagamento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change pagamento",
+    "content_type": 16,
+    "codename": "change_pagamento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete pagamento",
+    "content_type": 16,
+    "codename": "delete_pagamento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view pagamento",
+    "content_type": 16,
+    "codename": "view_pagamento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add produto",
+    "content_type": 17,
+    "codename": "add_produto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change produto",
+    "content_type": 17,
+    "codename": "change_produto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete produto",
+    "content_type": 17,
+    "codename": "delete_produto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view produto",
+    "content_type": 17,
+    "codename": "view_produto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Item do Pedido",
+    "content_type": 18,
+    "codename": "add_itempedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Item do Pedido",
+    "content_type": 18,
+    "codename": "change_itempedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Item do Pedido",
+    "content_type": 18,
+    "codename": "delete_itempedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Item do Pedido",
+    "content_type": 18,
+    "codename": "view_itempedido"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Avaliação",
+    "content_type": 19,
+    "codename": "add_avaliacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Avaliação",
+    "content_type": 19,
+    "codename": "change_avaliacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Avaliação",
+    "content_type": 19,
+    "codename": "delete_avaliacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Avaliação",
+    "content_type": 19,
+    "codename": "view_avaliacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Produto Variação",
+    "content_type": 20,
+    "codename": "add_produtovariacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Produto Variação",
+    "content_type": 20,
+    "codename": "change_produtovariacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Produto Variação",
+    "content_type": 20,
+    "codename": "delete_produtovariacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Produto Variação",
+    "content_type": 20,
+    "codename": "view_produtovariacao"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add tampa",
+    "content_type": 21,
+    "codename": "add_tampa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change tampa",
+    "content_type": 21,
+    "codename": "change_tampa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete tampa",
+    "content_type": 21,
+    "codename": "delete_tampa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view tampa",
+    "content_type": 21,
+    "codename": "view_tampa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add recipiente",
+    "content_type": 22,
+    "codename": "add_recipiente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change recipiente",
+    "content_type": 22,
+    "codename": "change_recipiente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete recipiente",
+    "content_type": 22,
+    "codename": "delete_recipiente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view recipiente",
+    "content_type": 22,
+    "codename": "view_recipiente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add adesivo",
+    "content_type": 23,
+    "codename": "add_adesivo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change adesivo",
+    "content_type": 23,
+    "codename": "change_adesivo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete adesivo",
+    "content_type": 23,
+    "codename": "delete_adesivo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view adesivo",
+    "content_type": 23,
+    "codename": "view_adesivo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add document",
+    "content_type": 24,
+    "codename": "add_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change document",
+    "content_type": 24,
+    "codename": "change_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete document",
+    "content_type": 24,
+    "codename": "delete_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view document",
+    "content_type": 24,
+    "codename": "view_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add image",
+    "content_type": 25,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change image",
+    "content_type": 25,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete image",
+    "content_type": 25,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view image",
+    "content_type": 25,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "core",
+    "model": "aroma"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "core",
+    "model": "categoria"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "core",
+    "model": "embalagem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "core",
+    "model": "fita"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "core",
+    "model": "parafina"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "core",
+    "model": "pavio"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "core",
+    "model": "tipoproduto"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "core",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "core",
+    "model": "endereco"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "core",
+    "model": "pedido"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "core",
+    "model": "pagamento"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "core",
+    "model": "produto"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "core",
+    "model": "itempedido"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "core",
+    "model": "avaliacao"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "core",
+    "model": "produtovariacao"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "core",
+    "model": "tampa"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "core",
+    "model": "recipiente"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "core",
+    "model": "adesivo"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "uploader",
+    "model": "document"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "uploader",
+    "model": "image"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xgpsemlg77p7qy5y5t4gve2p4uz0u6pn",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFl5FFcuvcbyMwAUjWQlHZl_HfbpAvdnnPufYuA61LC2tMcpiguQonTLyPkZ6q7iA-s9ya51WWeSO6JPGyXtxbT63q0fwcFe9nWpC0ygrEZ_aA0uDwyELA3gOAi5A1oZ0YVk1KUvIUzsgOmpBmGIYvPF-PXN_M:1wNdfp:raK8JqMDqCgantElsML5J4MTDVR3e9uQ-2eOszgBQNw",
+    "expire_date": "2026-05-28T21:32:53.701Z"
+  }
+},
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6qcCdChwTciUodDpt5VOGL$oR+jC/c+/8IFWKV+jyzsQZEiBmcyvp2tRGzQscNXgOo=",
+    "last_login": "2026-05-14T21:32:53.697Z",
+    "is_superuser": true,
+    "email": "heloisa.longhi.ifc@gmail.com",
+    "name": null,
+    "is_active": true,
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 1,
+  "fields": {
+    "nome": "Aromas Florais",
+    "descricao": ""
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 2,
+  "fields": {
+    "nome": "Aromas Cítricos",
+    "descricao": ""
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 3,
+  "fields": {
+    "nome": "Aromas Doces",
+    "descricao": ""
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 4,
+  "fields": {
+    "nome": "Lembrancinhas",
+    "descricao": ""
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "Flor de Laranjeira",
+    "descricao": "",
+    "imagem": 1,
+    "ativo": true,
+    "categorias": [
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Capim Limão",
+    "descricao": "",
+    "imagem": 2,
+    "ativo": true,
+    "categorias": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 3,
+  "fields": {
+    "nome": "Lavanda Francesa",
+    "descricao": "",
+    "imagem": 3,
+    "ativo": true,
+    "categorias": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 4,
+  "fields": {
+    "nome": "Jasmim",
+    "descricao": "",
+    "imagem": 4,
+    "ativo": true,
+    "categorias": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 5,
+  "fields": {
+    "nome": "Flor de Cerejeira",
+    "descricao": "",
+    "imagem": 5,
+    "ativo": true,
+    "categorias": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 6,
+  "fields": {
+    "nome": "Maçã e Canela",
+    "descricao": "",
+    "imagem": 6,
+    "ativo": true,
+    "categorias": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 7,
+  "fields": {
+    "nome": "Bergamota",
+    "descricao": "",
+    "imagem": 7,
+    "ativo": true,
+    "categorias": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 8,
+  "fields": {
+    "nome": "Baunilha",
+    "descricao": "",
+    "imagem": 8,
+    "ativo": true,
+    "categorias": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 9,
+  "fields": {
+    "nome": "Limão Siciliano",
+    "descricao": "",
+    "imagem": 9,
+    "ativo": true,
+    "categorias": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 1,
+  "fields": {
+    "produto": 1,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 2,
+  "fields": {
+    "produto": 1,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 3,
+  "fields": {
+    "produto": 1,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 4,
+  "fields": {
+    "produto": 2,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 5,
+  "fields": {
+    "produto": 2,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 6,
+  "fields": {
+    "produto": 2,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 7,
+  "fields": {
+    "produto": 3,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 8,
+  "fields": {
+    "produto": 3,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 9,
+  "fields": {
+    "produto": 3,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 10,
+  "fields": {
+    "produto": 4,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 11,
+  "fields": {
+    "produto": 4,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 12,
+  "fields": {
+    "produto": 4,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 13,
+  "fields": {
+    "produto": 5,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 14,
+  "fields": {
+    "produto": 5,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 15,
+  "fields": {
+    "produto": 5,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 16,
+  "fields": {
+    "produto": 6,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 17,
+  "fields": {
+    "produto": 6,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 18,
+  "fields": {
+    "produto": 6,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 19,
+  "fields": {
+    "produto": 7,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 20,
+  "fields": {
+    "produto": 7,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 21,
+  "fields": {
+    "produto": 7,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 22,
+  "fields": {
+    "produto": 8,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 23,
+  "fields": {
+    "produto": 8,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 24,
+  "fields": {
+    "produto": 8,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 25,
+  "fields": {
+    "produto": 9,
+    "tamanho": "P",
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 26,
+  "fields": {
+    "produto": 9,
+    "tamanho": "M",
+    "preco": "40.00"
+  }
+},
+{
+  "model": "core.produtovariacao",
+  "pk": 27,
+  "fields": {
+    "produto": 9,
+    "tamanho": "G",
+    "preco": "50.00"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 1,
+  "fields": {
+    "attachment_key": "d25deff4-fc64-40eb-a7e0-e7d4a27c43bd",
+    "public_id": "bb89fbd3-f919-4ee2-9b19-c1a480f11ec8",
+    "file": "media/images/bb89fbd3-f919-4ee2-9b19-c1a480f11ec8_wtby9d",
+    "description": "",
+    "uploaded_on": "2026-05-14T21:35:26.264Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 2,
+  "fields": {
+    "attachment_key": "50d8248c-c77a-45de-b861-3113b206ad6e",
+    "public_id": "2d493aff-e4a4-4225-b01a-b80ccd0639c8",
+    "file": "media/images/2d493aff-e4a4-4225-b01a-b80ccd0639c8_t3zzos",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:05:07.592Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 3,
+  "fields": {
+    "attachment_key": "a80da5b3-f0e9-4929-9fa3-8b0dbf734cee",
+    "public_id": "9c847700-080f-43c8-8a4d-91ca93c72857",
+    "file": "media/images/9c847700-080f-43c8-8a4d-91ca93c72857_yz4zj3",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:06:54.366Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 4,
+  "fields": {
+    "attachment_key": "aa6626fd-3062-4d61-99d0-52aaeb68d9ca",
+    "public_id": "4248359d-94c7-4e7e-915f-a9bdb14e4f2a",
+    "file": "media/images/4248359d-94c7-4e7e-915f-a9bdb14e4f2a_fedx72",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:08:09.269Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 5,
+  "fields": {
+    "attachment_key": "124d58f9-5a95-47a8-b8c3-c84ae4a4700c",
+    "public_id": "58f19522-8b76-4c67-a835-92e98b28fd19",
+    "file": "media/images/58f19522-8b76-4c67-a835-92e98b28fd19_hbh5hr",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:08:43.291Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 6,
+  "fields": {
+    "attachment_key": "919b39bf-cc86-4469-9b1d-a57d4f2ae39a",
+    "public_id": "a2f2c7ec-98af-4c24-8988-fc188da06c3f",
+    "file": "media/images/a2f2c7ec-98af-4c24-8988-fc188da06c3f_yfsnee",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:09:16.738Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 7,
+  "fields": {
+    "attachment_key": "b7bbc3a9-b498-4fa3-a66b-173db968913d",
+    "public_id": "18231d64-f0d9-42e3-91db-d4b1b011c997",
+    "file": "media/images/18231d64-f0d9-42e3-91db-d4b1b011c997_asugpp",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:09:46.235Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 8,
+  "fields": {
+    "attachment_key": "a3ad6b8d-b1f5-4652-90dd-f4499b83d049",
+    "public_id": "2e9afada-79cc-4852-8c4d-55d3cf3b7d16",
+    "file": "media/images/2e9afada-79cc-4852-8c4d-55d3cf3b7d16_p3z2fx",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:11:30.914Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 9,
+  "fields": {
+    "attachment_key": "36c08182-d60b-407a-806a-b8ce7790c4a2",
+    "public_id": "d67b9104-473f-47c3-bc69-f1863f9b5584",
+    "file": "media/images/d67b9104-473f-47c3-bc69-f1863f9b5584_bwhni3",
+    "description": "",
+    "uploaded_on": "2026-05-14T22:12:07.099Z"
+  }
+}
+]

@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'uploader',
+    'phonenumber_field',
 ]
+
+PHONENUMBER_DEFAULT_REGION = 'BR'
+PHONENUMBER_DEFAULT_FORMAT = 'NATIONAL'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -148,6 +152,7 @@ AUTH_USER_MODEL = 'core.User'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',),
     'DEFAULT_PAGINATION_CLASS': 'app.pagination.CustomPagination',
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'PAGE_SIZE': 10,
 }
