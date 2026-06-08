@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'uploader',
+    'phonenumber_field',
 ]
+
+PHONENUMBER_DEFAULT_REGION = 'BR'
+PHONENUMBER_DEFAULT_FORMAT = 'NATIONAL'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

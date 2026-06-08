@@ -9,6 +9,7 @@ from django.contrib.auth.models import (
 )
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.modelfields import PhoneNumberField
 
 from uploader.models import Image
 
@@ -42,8 +43,10 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     """User model in the system."""
 
+    name = models.CharField(max_length=255, verbose_name=_('name'), help_text=_('Username'))
     email = models.EmailField(max_length=255, unique=True, verbose_name=_('email'), help_text=_('Email'))
-    name = models.CharField(max_length=255, blank=True, null=True, verbose_name=_('name'), help_text=_('Username'))
+    telefone = PhoneNumberField(verbose_name=_('telefone'), help_text=_('Telefone'))
+    nascimento = models.DateField(verbose_name=_('nascimento'), help_text=_('Data de nascimento'))
     is_active = models.BooleanField(
         default=True, verbose_name=_('Usuário está ativo'), help_text=_('Indica que este usuário está ativo.')
     )
