@@ -9,20 +9,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Define o modo de execução da aplicação
-MODE = os.getenv('MODE')
+MODE = os.getenv('MODE', 'DEVELOPMENT')
 
 # Constrói o caminho base do projeto, usado para definir caminhos relativos
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Segurança e configuração básica
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure')
-DEBUG = os.getenv('DEBUG', 'False')
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'http://localhost:8000',
-]
-CORS_ALLOW_ALL_ORIGINS = True
+SECRET_KEY = os.getenv('SECRET_KEY')
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1'
+).split(',')
+CSRF_TRUSTED_ORIGINS = os.getenv(
+    'CSRF_TRUSTED_ORIGINS',
+    'http://localhost:3000,http://localhost:8000'
+).split(',')
+CORS_ALLOWED_ORIGINS = os.getenv(
+    'CORS_ALLOWED_ORIGINS',
+    ''
+).split(',')
 
 # Aplicações instaladas
 INSTALLED_APPS = [
@@ -82,7 +88,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Banco de dados
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
+        default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3'),
         conn_max_age=600,
         conn_health_checks=True,
     )
@@ -124,7 +130,6 @@ if MODE == 'DEVELOPMENT':
     MEDIA_URL = f'http://{MY_IP}:19003/media/'
 else:
     MEDIA_URL = '/media/'
-    CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STORAGES = {
         'default': {
@@ -134,6 +139,13 @@ else:
             'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
         },
     }
+
+# Configurações do Cloudinary para armazenamento de mídia
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
 
 # Tipo padrão de campo para chaves primárias
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -164,12 +176,6 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-# Configurações do Cloudinary para armazenamento de mídia
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dz0b8ehuk',
-    'API_KEY': '488439381972513',
-    'API_SECRET': 'zoob_lZOKtQ7YyH8MT-ghRvtNk0',
-}
-
 # Exibe as configurações principais para verificação
-print(f'{MODE = } \n{MEDIA_URL = } \n{DATABASES = }')
+if DEBUG:
+    print(f'{MODE = }')
