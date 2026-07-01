@@ -18,7 +18,7 @@ class ProdutoRetrieveSerializer(ModelSerializer):
 
     class Meta:
         model = Produto
-        fields = '__all__'
+        fields = ['id', 'nome', 'descricao', 'imagem', 'ativo', 'categorias', 'variacoes', 'avaliacao_set']
         depth = 1
 
 
