@@ -67,7 +67,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = [
+        'name',
+        'telefone',
+        'nascimento',
+    ]
 
     class Meta:
         """Meta options for the model."""
