@@ -19,7 +19,6 @@ from core.views import (
     CategoriaViewSet,
     CompraViewSet,
     EnderecoViewSet,
-    ItemPedidoViewSet,
     PagamentoViewSet,
     ProdutoVariacaoViewSet,
     ProdutoViewSet,
@@ -35,7 +34,6 @@ router.register(r'avaliacao', AvaliacaoViewSet, basename='avaliacao')
 router.register(r'categoria', CategoriaViewSet, basename='categoria')
 router.register(r'compra', CompraViewSet, basename='compra')
 router.register(r'endereco', EnderecoViewSet, basename='endereco')
-router.register(r'item-pedido', ItemPedidoViewSet, basename='item-pedido')
 router.register(r'pagamento', PagamentoViewSet, basename='pagamento')
 router.register(r'produto-variacao', ProdutoVariacaoViewSet, basename='produto-variacao')
 router.register(r'produto', ProdutoViewSet, basename='produto')

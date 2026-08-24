@@ -1,7 +1,6 @@
 from .avaliacao import AvaliacaoViewSet
 from .categoria import CategoriaViewSet
 from .endereco import EnderecoViewSet
-from .item_pedido import ItemPedidoViewSet
 from .pagamento import PagamentoViewSet
 from .compra import CompraViewSet
 from .produto_variacao import ProdutoVariacaoViewSet

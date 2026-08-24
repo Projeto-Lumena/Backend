@@ -1,7 +1,6 @@
 from .avaliacao import AvaliacaoSerializer
 from .categoria import CategoriaSerializer
 from .endereco import EnderecoSerializer
-from .item_pedido import ItemPedidoSerializer
 from .pagamento import PagamentoSerializer
 from .compra import CompraSerializer
 from .produto_variacao import ProdutoVariacaoSerializer  

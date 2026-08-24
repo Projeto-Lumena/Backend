@@ -119,6 +119,6 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(models.Avaliacao)
 admin.site.register(models.Endereco)
-admin.site.register(models.ItemPedido)
+admin.site.register(models.ItensCompra)
 admin.site.register(models.Pagamento)
 admin.site.register(models.TipoProduto)
