@@ -3,7 +3,7 @@ from .categoria import Categoria
 from .endereco import Endereco
 from .item_pedido import ItemPedido
 from .pagamento import Pagamento
-from .pedido import Pedido
+from .compra import Compra
 from .produto_variacao import ProdutoVariacao
 from .produto import Produto
 from .tipo import TipoProduto

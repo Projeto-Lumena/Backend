@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Pedido
+from core.models import Compra
 
 
-class PedidoSerializer(ModelSerializer):
+class CompraSerializer(ModelSerializer):
     class Meta:
-        model = Pedido
+        model = Compra
         fields = '__all__'

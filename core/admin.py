@@ -7,7 +7,22 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core import models
-from core.models import Categoria, Produto, ProdutoVariacao, User
+from core.models import Categoria, Compra, Produto, ProdutoVariacao, User
+
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
+    search_fields = ('nome',)
+    ordering = ('nome',)
+    list_per_page = 10
+
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    list_display = ('usuario', 'status')
+    ordering = ('usuario', 'status')
+    list_per_page = 10
 
 
 @admin.register(Produto)
@@ -44,14 +59,6 @@ class ProdutoVariacaoAdmin(admin.ModelAdmin):
         'produto',
         'preco',
     )
-    list_per_page = 10
-
-
-@admin.register(Categoria)
-class CategoriaAdmin(admin.ModelAdmin):
-    list_display = ('nome',)
-    search_fields = ('nome',)
-    ordering = ('nome',)
     list_per_page = 10
 
 
@@ -114,5 +121,4 @@ admin.site.register(models.Avaliacao)
 admin.site.register(models.Endereco)
 admin.site.register(models.ItemPedido)
 admin.site.register(models.Pagamento)
-admin.site.register(models.Pedido)
 admin.site.register(models.TipoProduto)

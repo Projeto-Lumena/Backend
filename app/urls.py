@@ -17,10 +17,10 @@ from rest_framework_simplejwt.views import (
 from core.views import (
     AvaliacaoViewSet,
     CategoriaViewSet,
+    CompraViewSet,
     EnderecoViewSet,
     ItemPedidoViewSet,
     PagamentoViewSet,
-    PedidoViewSet,
     ProdutoVariacaoViewSet,
     ProdutoViewSet,
     TipoProdutoViewSet,
@@ -33,10 +33,10 @@ router = DefaultRouter()
 
 router.register(r'avaliacao', AvaliacaoViewSet, basename='avaliacao')
 router.register(r'categoria', CategoriaViewSet, basename='categoria')
+router.register(r'compra', CompraViewSet, basename='compra')
 router.register(r'endereco', EnderecoViewSet, basename='endereco')
 router.register(r'item-pedido', ItemPedidoViewSet, basename='item-pedido')
 router.register(r'pagamento', PagamentoViewSet, basename='pagamento')
-router.register(r'pedido', PedidoViewSet, basename='pedido')
 router.register(r'produto-variacao', ProdutoVariacaoViewSet, basename='produto-variacao')
 router.register(r'produto', ProdutoViewSet, basename='produto')
 router.register(r'tipo', TipoProdutoViewSet, basename='tipo')
