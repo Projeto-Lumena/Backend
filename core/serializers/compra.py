@@ -1,12 +1,21 @@
-from rest_framework.serializers import CharField, ModelSerializer
+from rest_framework.serializers import (
+    CharField,
+    ModelSerializer,
+    SerializerMethodField,
+)
 
 from core.models import Compra, ItensCompra
 
 
 class ItensCompraSerializer(ModelSerializer):
+    total = SerializerMethodField()
+
+    def get_total(self, instance):
+        return instance.variacao.preco * instance.quantidade
+
     class Meta:
         model = ItensCompra
-        fields = ('produto', 'quantidade')
+        fields = ('produto', 'variacao', 'quantidade', 'total')
         depth = 1
 
 
