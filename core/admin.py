@@ -3,6 +3,7 @@ Django admin customization.
 """
 
 from django.contrib import admin
+from django.contrib.admin import display
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
@@ -25,12 +26,15 @@ class ItensCompraInline(admin.TabularInline):
 
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'status')
-    search_fields = ('usuario', 'status')
-    list_filter = ('usuario', 'status')
+    list_display = ('usuario', 'status', 'total_formatado')  # mostra na listagem
     ordering = ('usuario', 'status')
     list_per_page = 10
     inlines = [ItensCompraInline]
+    readonly_fields = ('total_formatado',)  # mostra dentro do formulário
+
+    @display(description='Total')
+    def total_formatado(self, obj):
+        return f'R$ {obj.total:.2f}'.replace('.', ',')
 
 
 @admin.register(Produto)
