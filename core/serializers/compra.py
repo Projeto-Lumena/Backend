@@ -19,15 +19,17 @@ class CompraCreateUpdateSerializer(ModelSerializer):
 
     class Meta:
         model = Compra
-        fields = ('id', 'usuario', 'itens')
+        fields = ('id', 'itens')
 
     @transaction.atomic
     def create(self, validated_data):
         itens = validated_data.pop('itens')
+
         compra = Compra.objects.create(**validated_data)
+
         for item in itens:
             ItensCompra.objects.create(compra=compra, **item)
-        compra.save()
+
         return compra
 
 
