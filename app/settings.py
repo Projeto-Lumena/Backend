@@ -19,15 +19,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = os.getenv(
     'ALLOWED_HOSTS',
-    'localhost,127.0.0.1'
 ).split(',')
-CSRF_TRUSTED_ORIGINS = os.getenv(
-    'CSRF_TRUSTED_ORIGINS',
-    'http://localhost:3000,http://localhost:8000'
-).split(',')
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS').split(',')
 CORS_ALLOWED_ORIGINS = os.getenv(
     'CORS_ALLOWED_ORIGINS',
-    ''
 ).split(',')
 
 # Aplicações instaladas
@@ -126,11 +121,18 @@ FILE_UPLOAD_PERMISSIONS = 0o640
 
 # Configurações específicas para desenvolvimento, migração e produção
 if MODE == 'DEVELOPMENT':
-    MY_IP = os.getenv('MY_IP', '127.0.0.1')
-    MEDIA_URL = f'http://{MY_IP}:19003/media/'
+    STORAGES = {
+        'default': {
+            'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+        },
+        'staticfiles': {
+            'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
+        },
+    }
 else:
     MEDIA_URL = '/media/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
     STORAGES = {
         'default': {
             'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',

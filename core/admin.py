@@ -3,11 +3,38 @@ Django admin customization.
 """
 
 from django.contrib import admin
+from django.contrib.admin import display
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core import models
-from core.models import Categoria, Produto, ProdutoVariacao, User
+from core.models import Categoria, Compra, ItensCompra, Produto, ProdutoVariacao, User
+
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
+    search_fields = ('nome',)
+    ordering = ('nome',)
+    list_per_page = 10
+
+
+class ItensCompraInline(admin.TabularInline):
+    model = ItensCompra
+    extra = 1  # Quantidade de itens adicionais
+
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    list_display = ('usuario', 'status', 'total_formatado')  # mostra na listagem
+    ordering = ('usuario', 'status')
+    list_per_page = 10
+    inlines = [ItensCompraInline]
+    readonly_fields = ('total_formatado',)  # mostra dentro do formulário
+
+    @display(description='Total')
+    def total_formatado(self, obj):
+        return f'R$ {obj.total:.2f}'.replace('.', ',')
 
 
 @admin.register(Produto)
@@ -44,14 +71,6 @@ class ProdutoVariacaoAdmin(admin.ModelAdmin):
         'produto',
         'preco',
     )
-    list_per_page = 10
-
-
-@admin.register(Categoria)
-class CategoriaAdmin(admin.ModelAdmin):
-    list_display = ('nome',)
-    search_fields = ('nome',)
-    ordering = ('nome',)
     list_per_page = 10
 
 
@@ -110,17 +129,7 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
-admin.site.register(models.Endereco)
 admin.site.register(models.Avaliacao)
-admin.site.register(models.Pedido)
+admin.site.register(models.Endereco)
 admin.site.register(models.Pagamento)
-admin.site.register(models.Embalagem)
-admin.site.register(models.ItemPedido)
-admin.site.register(models.Fita)
-admin.site.register(models.Tampa)
 admin.site.register(models.TipoProduto)
-admin.site.register(models.Recipiente)
-admin.site.register(models.Aroma)
-admin.site.register(models.Adesivo)
-admin.site.register(models.Parafina)
-admin.site.register(models.Pavio)
