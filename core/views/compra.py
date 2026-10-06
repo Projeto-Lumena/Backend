@@ -15,3 +15,11 @@ class CompraViewSet(ModelViewSet):
         if self.action in {'create', 'update'}:
             return CompraCreateUpdateSerializer
         return CompraSerializer
+
+    def get_queryset(self):
+        usuario = self.request.user
+        if usuario.is_superuser:
+            return Compra.objects.all().order_by('-id')
+        if usuario.groups.filter(name='administradores').exists():
+            return Compra.objects.all().order_by('-id')
+        return Compra.objects.filter(usuario=usuario).order_by('-id')
