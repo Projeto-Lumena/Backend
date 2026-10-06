@@ -20,10 +20,7 @@ class Compra(models.Model):
     status = models.IntegerField(choices=StatusCompra.choices, default=StatusCompra.CARRINHO)
     data_criacao = models.DateTimeField(auto_now_add=True)
     data_atualizacao = models.DateTimeField(auto_now=True)
-    tipo_pagamento = models.IntegerField(
-        choices=TipoPagamento.choices,
-        default=TipoPagamento.PIX
-    )
+    tipo_pagamento = models.IntegerField(choices=TipoPagamento.choices, default=TipoPagamento.PIX)
 
     @property
     def total(self):
