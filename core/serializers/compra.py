@@ -1,6 +1,8 @@
 from django.db import transaction
 from rest_framework.serializers import (
     CharField,
+    CurrentUserDefault,
+    HiddenField,
     ModelSerializer,
     SerializerMethodField,
 )
@@ -15,6 +17,7 @@ class ItensCompraCreateUpdateSerializer(ModelSerializer):
 
 
 class CompraCreateUpdateSerializer(ModelSerializer):
+    usuario = HiddenField(default=CurrentUserDefault())
     itens = ItensCompraCreateUpdateSerializer(many=True)
 
     class Meta:
