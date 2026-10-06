@@ -14,7 +14,8 @@ from core.models import Compra, ItensCompra
 class ItensCompraCreateUpdateSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
-        fields = ('produto', 'variacao', 'quantidade')
+        fields = ('produto', 'variacao', 'quantidade', 'preco')
+        read_only_fields = ('preco',)
 
     def validate_quantidade(self, quantidade):
         if quantidade <= 0:
@@ -35,17 +36,20 @@ class CompraCreateUpdateSerializer(ModelSerializer):
         itens = validated_data.pop('itens')
         compra = Compra.objects.create(**validated_data)
         for item in itens:
+            item['preco'] = item['variacao'].preco
             ItensCompra.objects.create(compra=compra, **item)
         compra.save()
         return compra
 
     @transaction.atomic
     def update(self, compra, validated_data):
-        itens = validated_data.pop('itens', None)
-        if itens is not None:
+        itens = validated_data.pop('itens')
+        if itens:
             compra.itens.all().delete()
             for item in itens:
+                item['preco'] = item['variacao'].preco
                 ItensCompra.objects.create(compra=compra, **item)
+        compra.save()
         return super().update(compra, validated_data)
 
 
@@ -53,11 +57,11 @@ class ItensCompraSerializer(ModelSerializer):
     total = SerializerMethodField()
 
     def get_total(self, instance):
-        return instance.variacao.preco * instance.quantidade
+        return instance.quantidade * instance.preco
 
     class Meta:
         model = ItensCompra
-        fields = ('produto', 'variacao', 'quantidade', 'total')
+        fields = ('produto', 'variacao', 'quantidade', 'preco', 'total')
         depth = 1
 
 
@@ -77,7 +81,7 @@ class ItensCompraListSerializer(ModelSerializer):
 
     class Meta:
         model = ItensCompra
-        fields = ('quantidade', 'produto', 'variacao')
+        fields = ('quantidade', 'produto', 'variacao', 'preco')
         depth = 1
 
 

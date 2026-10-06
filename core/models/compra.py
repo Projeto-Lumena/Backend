@@ -17,7 +17,7 @@ class Compra(models.Model):
 
     @property
     def total(self):
-        return sum(item.variacao.preco * item.quantidade for item in self.itens.all())
+        return sum(item.preco * item.quantidade for item in self.itens.all())
 
 
 class ItensCompra(models.Model):
@@ -25,6 +25,7 @@ class ItensCompra(models.Model):
     produto = models.ForeignKey(Produto, on_delete=models.PROTECT, related_name='+')
     variacao = models.ForeignKey(ProdutoVariacao, on_delete=models.PROTECT, related_name='+')
     quantidade = models.IntegerField(default=1)
+    preco = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 
     class Meta:
         verbose_name = 'Item da Compra'
