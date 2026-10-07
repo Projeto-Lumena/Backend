@@ -1,6 +1,7 @@
 from django.db import transaction
 from rest_framework import status
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
@@ -15,6 +16,7 @@ from core.serializers import (
 class CompraViewSet(ModelViewSet):
     queryset = Compra.objects.order_by('-id')
     serializer_class = CompraSerializer
+    permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'post', 'put', 'delete']
 
     def get_serializer_class(self):

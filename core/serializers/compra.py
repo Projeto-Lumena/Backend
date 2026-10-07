@@ -35,22 +35,47 @@ class CompraCreateUpdateSerializer(ModelSerializer):
     @transaction.atomic
     def create(self, validated_data):
         itens = validated_data.pop('itens')
-        compra = Compra.objects.create(**validated_data)
+        usuario = validated_data['usuario']
+
+        compra, criada = Compra.objects.get_or_create(
+            usuario=usuario,
+            status=Compra.StatusCompra.CARRINHO,
+            defaults=validated_data,
+        )
+
+        # Caso o carrinho já existisse, atualiza o tipo de pagamento
+        # com a escolha enviada pelo usuário.
+        if not criada and 'tipo_pagamento' in validated_data:
+            compra.tipo_pagamento = validated_data['tipo_pagamento']
+            compra.save()
+
         for item in itens:
-            item['preco'] = item['variacao'].preco
-            ItensCompra.objects.create(compra=compra, **item)
-        compra.save()
+            item_existente = compra.itens.filter(
+                produto=item['produto'],
+                variacao=item['variacao'],
+            ).first()
+
+            if item_existente:
+                item_existente.quantidade += item['quantidade']
+                item_existente.preco = item['variacao'].preco
+                item_existente.save()
+            else:
+                item['preco'] = item['variacao'].preco
+                ItensCompra.objects.create(compra=compra, **item)
+
         return compra
 
     @transaction.atomic
     def update(self, compra, validated_data):
-        itens = validated_data.pop('itens')
+        itens = validated_data.pop('itens', [])
+
         if itens:
             compra.itens.all().delete()
+
             for item in itens:
                 item['preco'] = item['variacao'].preco
                 ItensCompra.objects.create(compra=compra, **item)
-        compra.save()
+
         return super().update(compra, validated_data)
 
 
