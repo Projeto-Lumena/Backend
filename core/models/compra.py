@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 
 from .produto import Produto
 from .produto_variacao import ProdutoVariacao
@@ -12,18 +13,53 @@ class Compra(models.Model):
         PAGO = 3, 'Pago'
         ENTREGUE = 4, 'Entregue'
 
-    usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name='compras')
-    status = models.IntegerField(choices=StatusCompra.choices, default=StatusCompra.CARRINHO)
+    usuario = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        related_name='compras'
+    )
+
+    status = models.IntegerField(
+        choices=StatusCompra.choices,
+        default=StatusCompra.CARRINHO
+    )
 
     @property
     def total(self):
-        return sum(item.variacao.preco * item.quantidade for item in self.itens.all())
+        return sum(
+            item.variacao.preco * item.quantidade
+            for item in self.itens.all()
+        )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['usuario'],
+                condition=Q(status=1),
+                name='unique_carrinho_por_usuario'
+            )
+        ]
 
 
 class ItensCompra(models.Model):
-    compra = models.ForeignKey(Compra, on_delete=models.CASCADE, related_name='itens')
-    produto = models.ForeignKey(Produto, on_delete=models.PROTECT, related_name='+')
-    variacao = models.ForeignKey(ProdutoVariacao, on_delete=models.PROTECT, related_name='+')
+    compra = models.ForeignKey(
+        Compra,
+        on_delete=models.CASCADE,
+        related_name='itens'
+    )
+
+    produto = models.ForeignKey(
+        Produto,
+        on_delete=models.PROTECT,
+        related_name='+'
+    )
+
+    variacao = models.ForeignKey(
+        ProdutoVariacao,
+        on_delete=models.PROTECT,
+        related_name='+'
+    )
+
     quantidade = models.IntegerField(default=1)
 
     class Meta:

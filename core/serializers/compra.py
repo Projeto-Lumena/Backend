@@ -1,4 +1,5 @@
 from django.db import transaction
+from rest_framework import serializers
 from rest_framework.serializers import (
     CharField,
     ModelSerializer,
@@ -12,6 +13,26 @@ class ItensCompraCreateUpdateSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = ('produto', 'variacao', 'quantidade')
+
+    def validate(self, data):
+        produto = data.get('produto')
+        variacao = data.get('variacao')
+
+        if (
+            produto
+            and variacao
+            and variacao.produto_id != produto.id
+        ):
+            raise serializers.ValidationError(
+                'A variação informada não pertence ao produto selecionado.'
+            )
+
+        if data.get('quantidade', 1) <= 0:
+            raise serializers.ValidationError(
+                'A quantidade deve ser maior que zero.'
+            )
+
+        return data
 
 
 class CompraCreateUpdateSerializer(ModelSerializer):
@@ -31,6 +52,18 @@ class CompraCreateUpdateSerializer(ModelSerializer):
             ItensCompra.objects.create(compra=compra, **item)
 
         return compra
+
+    @transaction.atomic
+    def update(self, instance, validated_data):
+        itens = validated_data.pop('itens', None)
+
+        if itens is not None:
+            instance.itens.all().delete()
+
+            for item in itens:
+                ItensCompra.objects.create(compra=instance, **item)
+
+        return instance
 
 
 class ItensCompraSerializer(ModelSerializer):
