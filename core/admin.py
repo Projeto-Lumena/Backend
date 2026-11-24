@@ -24,23 +24,9 @@ class ItensCompraInline(admin.TabularInline):
     extra = 1  # Quantidade de itens adicionais
     readonly_fields = ('preco',)
 
-
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
     list_display = ('id',)
-
-    @display(description='Total')
-    def total_formatado(self, obj):
-        return f'R$ {obj.total:.2f}'.replace('.', ',')
-
-    def save_formset(self, request, form, formset, change):
-        instances = formset.save(commit=False)
-
-        for instance in instances:
-            instance.preco = instance.variacao.preco
-            instance.save()
-
-        formset.save_m2m()
 
 
 @admin.register(Produto)
