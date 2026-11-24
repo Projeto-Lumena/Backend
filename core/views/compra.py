@@ -1,6 +1,8 @@
+
 from django.db import transaction
 from rest_framework import status
 from rest_framework.decorators import action
+from rest_framework.exceptions import ValidationError
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
@@ -19,6 +21,23 @@ class CompraViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'post', 'put', 'delete']
 
+    def get_queryset(self):
+        usuario = self.request.user
+
+        queryset = (
+            Compra.objects
+            .prefetch_related('itens__produto', 'itens__variacao')
+            .order_by('-id')
+        )
+
+        if usuario.is_superuser:
+            return queryset
+
+        if usuario.groups.filter(name='administradores').exists():
+            return queryset
+
+        return queryset.filter(usuario=usuario)
+
     def get_serializer_class(self):
         if self.action == 'list':
             return CompraListSerializer
@@ -28,16 +47,22 @@ class CompraViewSet(ModelViewSet):
 
         return CompraSerializer
 
-    def get_queryset(self):
-        usuario = self.request.user
+    @transaction.atomic
+    def perform_create(self, serializer):
+        serializer.save(
+            usuario=self.request.user,
+            status=Compra.StatusCompra.CARRINHO
+        )
 
-        if usuario.is_superuser:
-            return Compra.objects.all().order_by('-id')
+    def perform_update(self, serializer):
+        compra = self.get_object()
 
-        if usuario.groups.filter(name='administradores').exists():
-            return Compra.objects.all().order_by('-id')
+        if compra.status != Compra.StatusCompra.CARRINHO:
+            raise ValidationError(
+                'Somente compras que estão na sacola podem ser alteradas.'
+            )
 
-        return Compra.objects.filter(usuario=usuario).order_by('-id')
+        serializer.save()
 
     @action(detail=True, methods=['post'])
     @transaction.atomic
@@ -45,15 +70,21 @@ class CompraViewSet(ModelViewSet):
         compra = self.get_object()
 
         if compra.status != Compra.StatusCompra.CARRINHO:
-            return Response(
-                {'status': 'A compra não está no carrinho'},
-                status=status.HTTP_400_BAD_REQUEST,
+            raise ValidationError(
+                'Somente compras que estão na sacola podem ser finalizadas.'
+            )
+
+        if not compra.itens.exists():
+            raise ValidationError(
+                'Não é possível finalizar uma compra sem itens.'
             )
 
         compra.status = Compra.StatusCompra.FINALIZADO
-        compra.save()
+        compra.save(update_fields=['status'])
+
+        serializer = CompraSerializer(compra)
 
         return Response(
-            {'status': 'Compra finalizada'},
-            status=status.HTTP_200_OK,
+            serializer.data,
+            status=status.HTTP_200_OK
         )
