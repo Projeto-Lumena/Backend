@@ -22,19 +22,35 @@ class CategoriaAdmin(admin.ModelAdmin):
 class ItensCompraInline(admin.TabularInline):
     model = ItensCompra
     extra = 1  # Quantidade de itens adicionais
+    readonly_fields = ('preco',)
 
 
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'status', 'total_formatado')  # mostra na listagem
-    ordering = ('usuario', 'status')
+    list_display = ('usuario', 'status', 'total_formatado', 'data_criacao', 'data_atualizacao')
+    ordering = ('usuario', 'status', 'data_criacao')
+    search_fields = ('usuario__email', 'status')
+    list_filter = ('status', 'data_criacao', 'data_atualizacao')
     list_per_page = 10
     inlines = [ItensCompraInline]
-    readonly_fields = ('total_formatado',)  # mostra dentro do formulário
+    readonly_fields = (
+        'data_criacao',
+        'data_atualizacao',
+        'total_formatado',
+    )
 
     @display(description='Total')
     def total_formatado(self, obj):
         return f'R$ {obj.total:.2f}'.replace('.', ',')
+
+    def save_formset(self, request, form, formset, change):
+        instances = formset.save(commit=False)
+
+        for instance in instances:
+            instance.preco = instance.variacao.preco
+            instance.save()
+
+        formset.save_m2m()
 
 
 @admin.register(Produto)

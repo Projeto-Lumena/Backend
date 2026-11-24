@@ -4,8 +4,10 @@ from .endereco import EnderecoSerializer
 from .pagamento import PagamentoSerializer
 from .compra import (
     CompraCreateUpdateSerializer,
+    CompraListSerializer,
     CompraSerializer,
     ItensCompraCreateUpdateSerializer,
+    ItensCompraListSerializer,
     ItensCompraSerializer,
 )
 from .produto_variacao import ProdutoVariacaoSerializer  
