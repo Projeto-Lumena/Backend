@@ -1,4 +1,3 @@
-
 from django.db import transaction
 from rest_framework import serializers
 from rest_framework.serializers import (
@@ -22,28 +21,18 @@ class ItensCompraCreateUpdateSerializer(ModelSerializer):
 
     def validate_quantidade(self, quantidade):
         if quantidade <= 0:
-            raise ValidationError(
-                'A quantidade deve ser maior do que zero.'
-            )
+            raise ValidationError('A quantidade deve ser maior do que zero.')
         return quantidade
 
     def validate(self, data):
         produto = data.get('produto')
         variacao = data.get('variacao')
 
-        if (
-            produto
-            and variacao
-            and variacao.produto_id != produto.id
-        ):
-            raise serializers.ValidationError(
-                'A variação informada não pertence ao produto selecionado.'
-            )
+        if produto and variacao and variacao.produto_id != produto.id:
+            raise serializers.ValidationError('A variação informada não pertence ao produto selecionado.')
 
         if data.get('quantidade', 1) <= 0:
-            raise serializers.ValidationError(
-                'A quantidade deve ser maior que zero.'
-            )
+            raise serializers.ValidationError('A quantidade deve ser maior que zero.')
 
         return data
 
@@ -83,10 +72,7 @@ class CompraCreateUpdateSerializer(ModelSerializer):
                 item_existente.save()
             else:
                 item['preco'] = item['variacao'].preco
-                ItensCompra.objects.create(
-                    compra=compra,
-                    **item
-                )
+                ItensCompra.objects.create(compra=compra, **item)
 
         return compra
 
@@ -99,10 +85,7 @@ class CompraCreateUpdateSerializer(ModelSerializer):
 
             for item in itens:
                 item['preco'] = item['variacao'].preco
-                ItensCompra.objects.create(
-                    compra=instance,
-                    **item
-                )
+                ItensCompra.objects.create(compra=instance, **item)
 
         return instance
 
@@ -124,40 +107,49 @@ class CompraSerializer(ModelSerializer):
     status = CharField(source='get_status_display', read_only=True)
     data_criacao = DateTimeField(read_only=True)
     data_atualizacao = DateTimeField(read_only=True)
-    tipo_pagamento = CharField(
-        source='get_tipo_pagamento_display',
-        read_only=True
-    )
+    tipo_pagamento = CharField(source='get_tipo_pagamento_display', read_only=True)
     itens = ItensCompraSerializer(many=True, read_only=True)
 
     class Meta:
         model = Compra
-        fields = (
-            'id',
-            'usuario',
-            'status',
-            'total',
-            'data_criacao',
-            'data_atualizacao',
-            'tipo_pagamento',
-            'itens'
-        )
+        fields = ('id', 'usuario', 'status', 'total', 'data_criacao', 'data_atualizacao', 'tipo_pagamento', 'itens')
 
 
 class ItensCompraListSerializer(ModelSerializer):
+    produto_id = serializers.IntegerField(source='produto.id', read_only=True)
     produto = CharField(source='produto.nome', read_only=True)
+
+    variacao_id = serializers.IntegerField(source='variacao.id', read_only=True)
     variacao = CharField(source='variacao.tamanho', read_only=True)
+
+    imagem = serializers.SerializerMethodField()
+
+    def get_imagem(self, instance):
+        imagem = instance.produto.imagem
+
+        if imagem:
+            return {'url': imagem.url}
+
+        return None
 
     class Meta:
         model = ItensCompra
-        fields = ('quantidade', 'produto', 'variacao', 'preco')
-        depth = 1
+        fields = (
+            'produto_id',
+            'produto',
+            'variacao_id',
+            'variacao',
+            'quantidade',
+            'preco',
+            'imagem',
+        )
 
 
 class CompraListSerializer(ModelSerializer):
     usuario = CharField(source='usuario.email', read_only=True)
+    status = CharField(source='get_status_display', read_only=True)
     itens = ItensCompraListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Compra
-        fields = ('id', 'usuario', 'itens')
+        fields = ('id', 'usuario', 'status', 'total', 'itens')

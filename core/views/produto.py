@@ -1,4 +1,4 @@
-from django.db.models import Min, Max
+from django.db.models import Max, Min
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.viewsets import ModelViewSet
 
@@ -39,18 +39,12 @@ class ProdutoViewSet(ModelViewSet):
 
         if categorias:
             try:
-                ids = [
-                    int(categoria)
-                    for categoria in categorias.split(',')
-                    if categoria.strip()
-                ]
+                ids = [int(categoria) for categoria in categorias.split(',') if categoria.strip()]
             except ValueError:
                 return queryset.none()
 
             if ids:
-                queryset = queryset.filter(
-                    categorias__id__in=ids
-                )
+                queryset = queryset.filter(categorias__id__in=ids)
 
         return queryset.distinct()
 
