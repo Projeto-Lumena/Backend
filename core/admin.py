@@ -27,7 +27,7 @@ class ItensCompraInline(admin.TabularInline):
 
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'status', 'total_formatado', 'data_criacao', 'data_atualizacao')
+    list_display = ('usuario', 'status', 'data_criacao', 'data_atualizacao')
     ordering = ('usuario', 'status', 'data_criacao')
     search_fields = ('usuario__email', 'status')
     list_filter = ('status', 'data_criacao', 'data_atualizacao')
@@ -36,7 +36,6 @@ class CompraAdmin(admin.ModelAdmin):
     readonly_fields = (
         'data_criacao',
         'data_atualizacao',
-        'total_formatado',
     )
 
     @display(description='Total')
