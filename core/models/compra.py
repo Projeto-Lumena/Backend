@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.db.models import Q
 
@@ -13,6 +14,10 @@ class Compra(models.Model):
         PAGO = 3, 'Pago'
         ENTREGUE = 4, 'Entregue'
 
+    class TipoPagamento(models.IntegerChoices):
+        PIX = 1, 'PIX'
+        DINHEIRO = 2, 'Dinheiro'
+
     usuario = models.ForeignKey(
         User,
         on_delete=models.PROTECT,
@@ -24,10 +29,18 @@ class Compra(models.Model):
         default=StatusCompra.CARRINHO
     )
 
+    data_criacao = models.DateTimeField(auto_now_add=True)
+    data_atualizacao = models.DateTimeField(auto_now=True)
+
+    tipo_pagamento = models.IntegerField(
+        choices=TipoPagamento.choices,
+        default=TipoPagamento.PIX
+    )
+
     @property
     def total(self):
         return sum(
-            item.variacao.preco * item.quantidade
+            item.preco * item.quantidade
             for item in self.itens.all()
         )
 
@@ -61,6 +74,7 @@ class ItensCompra(models.Model):
     )
 
     quantidade = models.IntegerField(default=1)
+    preco = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 
     class Meta:
         verbose_name = 'Item da Compra'

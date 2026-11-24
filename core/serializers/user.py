@@ -24,6 +24,9 @@ class UserSerializer(ModelSerializer):
         input_formats=['%d/%m/%Y', '%Y-%m-%d'],
     )
 
+    def validate_email(self, email):
+        return email.lower()
+
     class Meta:
         model = User
         fields = (
@@ -45,6 +48,9 @@ class UserSerializer(ModelSerializer):
 
 class UserRegistrationSerializer(ModelSerializer):
     password = CharField(write_only=True, min_length=8)
+
+    def validate_email(self, email):
+        return email.lower()
 
     class Meta:
         model = User
